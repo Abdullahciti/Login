@@ -1,0 +1,127 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #b81775;
+}
+.login-box{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background: white;
+    padding: 60px 30px;
+    box-shadow:  0px 0px 15px 0px rgba(53, 34, 34, 0.6);
+}
+.login-box h2{
+    position: relative;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 10px;
+    padding: 0 180px 0 0;
+}
+.login-box h2::before{
+    position: absolute;
+    content: "";
+    bottom: -5px;
+    width: 50px;
+    height: 4px;
+    background: linear-gradient(to right, rgb(214, 19, 133), rgb(180, 111, 123)) ;
+}
+.login-box .login-field .email,
+.login-box .login-field .password{
+    position: relative;
+    transition: 0.3s;
+}
+.login-box .login-field input[type="email"]{
+    padding: 6px;
+    border: none;
+    width: 100%;
+    display: block;
+    border-bottom: 3px solid #ccc;
+    margin: 20px 0;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.login-box .login-field input[type="password"]{
+    padding: 6px;
+    border: none;
+    width: 100%;
+    display: block;
+    border-bottom: 3px solid #ccc;
+    margin: 20px 0;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.login-box .login-field input[type="email"]:focus,
+.login-box .login-field input[type="password"]:focus{
+    outline: none;
+    border-bottom: 3px solid #b81775;
+}
+.login-box .login-field .email::before,
+.login-box .login-field .password::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    /* width: 40%; */
+    width: 0;
+    height: 3px;
+    background: #b81775;
+    transition: 0.53s;
+}
+.login-box .login-field .email:hover::before,
+.login-box .login-field .password:hover::before{
+    width: 100%
+}
+.login-box .login-field input[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    width: 100%;
+    border: none;
+    background-image: linear-gradient(to right, rgb(212, 45, 143), rgb(128, 28, 45));
+    color: white;
+    text-transform: capitalize;
+    border-radius: 7px;
+    transition: all 0.5s ease; /* Transition the background-image property */
+    font-size: 15px;
+}
+input[type="submit"]:focus{
+
+    outline-color: transparent;
+}
+.login-box p{
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.login-box p::selection{
+    background: #b81775;
+    color: white;
+    padding: 0 10px;
+}
+.login-box a{
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    display: block;
+    background: white;
+    border-radius: 7px;
+    color: white;
+}
+.login-box a:first-of-type{
+    background: #1da1f2;
+}
+.login-box a:last-of-type{
+    background: #0f69df;
+    margin-top: 20px;
+}
